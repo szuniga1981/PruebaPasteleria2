@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import cl.sebastian.pruebapasteleria.databinding.ItemListBinding
+import coil.api.load
 import timber.log.Timber
 
 class PasteleriaAdapter:RecyclerView.Adapter<PasteleriaVH>() {
@@ -39,7 +40,11 @@ class PasteleriaAdapter:RecyclerView.Adapter<PasteleriaVH>() {
 }
 
 class PasteleriaVH (val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(products: Products) {
-
+    fun bind(cakes: Cakes) {
+        binding.ivImage.load(cakes.image)
+        binding.tvTitle.text=cakes.title
+        binding.tvSize.text=cakes.size
+        binding.tvPrice.text=cakes.price.toString()
+        binding.tvPreiewDes.text=cakes.previewDescription
     }
 }

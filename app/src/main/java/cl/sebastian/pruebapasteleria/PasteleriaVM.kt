@@ -11,8 +11,8 @@ class PasteleriaVM:ViewModel() {
 
 
     val repository=PasteleriaRepository()
-    val razimoList=repository.pasteleriaList
-    val detailRazimo=repository.detailPasteleria
+    val pasteleriaList=repository.pasteleriaList
+    val detailPasteleria=repository.detailPasteleria
     private val detail=MutableLiveData<Cakes>()
 
     init {
