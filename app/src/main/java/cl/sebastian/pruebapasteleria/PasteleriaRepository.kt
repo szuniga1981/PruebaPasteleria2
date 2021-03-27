@@ -20,7 +20,7 @@ class PasteleriaRepository {
             true-> {
                 response.body()?.let {
                     pasteleriaDao.insertProducts(it)
-                    Timber.d(" getPasteleriaFromApi con :${it.size} Razimo")
+                    Timber.d(" getPasteleriaFromApi con :${it.size} Pasteleria")
                 }
             }
             false ->
