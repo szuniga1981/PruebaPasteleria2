@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -42,4 +45,165 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+//MVVM
+    def core_version = "1.3.2"
+    def lifecycle_version = "2.2.0"
+    def arch_version = "2.1.0"
+    implementation "androidx.core:core:$core_version"
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+    // LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.2.0'
+    // Opcionales
+    // Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    // Annotation processor
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    // optional - helpers for implementing LifecycleOwner in a Service
+    implementation "androidx.lifecycle:lifecycle-service:$lifecycle_version"
+
+
+//Retrofit
+    def retro_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retro_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retro_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    //Retrofit RxJava2
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+
+//Glide
+    def glide_version = "4.11.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
+//PhotoView
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+//Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+//RXJava
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.7'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
+//Google GSON
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+
+//Testing
+    //Mockito
+    testImplementation 'org.mockito:mockito-core:3.6.0'
+    //PowerMock
+    def power_mock_version = "1.6.2"
+    testImplementation "org.powermock:powermock-api-mockito:$power_mock_version"
+    testImplementation "org.powermock:powermock-module-junit4:$power_mock_version"
+    //Espresso
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //Hamcrest
+    def ham_version = "2.2"
+    testImplementation "org.hamcrest:hamcrest:$ham_version"
+    testImplementation "org.hamcrest:hamcrest-library:$ham_version"
+    //Truth
+    testImplementation 'com.google.truth:truth:1.0'
+    testImplementation 'androidx.test.ext:truth:1.3.0'
+
+//FireBase
+    //UI
+    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
+    //Core
+    implementation 'com.google.firebase:firebase-core:17.0.1'
+    //Auth
+    implementation 'com.google.firebase:firebase-auth:19.4.0'
+    //Agregar en caso de errores
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+
+//Facebook
+    implementation 'com.facebook.android:facebook-android-sdk:8.1.0'
+    implementation 'com.facebook.android:facebook-login:8.1.0'
+
+//Twitter
+    implementation 'com.twitter.sdk.android:twitter-core:3.3.0'
+
+//Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Infinite Recyclerview Pager
+    implementation 'com.github.devlight:infinitecycleviewpager:1.0.2'
+
+//Dagger
+    implementation 'com.google.dagger:dagger:2.x'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.x'
+
+//Butterknife
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+//OK HTTP
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+
+//Progress Dialog
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+
+//Kotlin Extensions
+    //Core
+    implementation 'androidx.core:core-ktx:1.3.2'
+    //Collections
+    implementation 'androidx.collection:collection-ktx:1.1.0'
+    //Fragments
+    implementation 'androidx.fragment:fragment-ktx:1.2.5'
+    //LifeCycle
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0'
+    //LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    //ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+    //Navigation
+    implementation 'androidx.navigation:navigation-runtime-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.1'
+    //Palette (Colors)
+    implementation 'androidx.palette:palette-ktx:1.0.0'
+    //Reactive Streams
+    implementation 'androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0'
+    //Room
+    implementation 'androidx.room:room-ktx:2.2.6'
+    //SQLite
+    implementation 'androidx.sqlite:sqlite-ktx:2.1.0'
+    //WorkManager
+    implementation 'androidx.work:work-runtime-ktx:2.4.0'
+    //Firebase
+    implementation 'com.google.firebase:firebase-common-ktx:22.1.2'
+    //Play Core
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+    //Corutinas
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+    //Room
+    implementation 'androidx.room:room-ktx:2.2.5'
+    implementation 'androidx.room:room-runtime:2.2.5'
+
+    testImplementation 'androidx.room:room-testing:2.2.5'
+
+
+//Corutinas
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+//by viewmodels
+    implementation "androidx.activity:activity-ktx:1.1.0"
+
+//coil
+    implementation "io.coil-kt:coil:0.11.0"
+
+//coil
+    implementation "io.coil-kt:coil:0.11.0"
+
+//fragment conteiner view
+// viewModels(), FragmentContainerView
+    implementation 'androidx.fragment:fragment-ktx:1.3.0-rc01'
+    //timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }
